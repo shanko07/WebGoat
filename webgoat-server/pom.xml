@@ -188,7 +188,7 @@
                         </dependency>
                     </requiresUnpack>
                     <jvmArguments>
-                        <!-- -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000-->
+                        -javaagent:/home/siguser/code/shanko07/WebGoat/webgoat-server/seeker/seeker-agent.jar
                     </jvmArguments>
                     <fork>true</fork>
                 </configuration>

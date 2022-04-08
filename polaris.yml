@@ -1,0 +1,47 @@
+version: "1"
+project:
+  name: "Shanko-Webgoat-Demo"
+  branch: "dev"
+  revision:
+    name: ${scm.git.commit}
+    date: ${scm.git.commit.date}
+capture:
+  build:
+    cleanCommands:
+    - shell: [mvn, clean]
+    buildCommands:
+    - shell: [mvn, clean, install]
+  fileSystem:
+    ears:
+      extensions: [ear]
+      files:
+      - directory: ${project.projectDir}
+    java:
+      files:
+      - directory: ${project.projectDir}
+    javascript:
+      files:
+      - directory: ${project.projectDir}
+      - excludeRegex: node_modules|bower_components|vendor
+    php:
+      files:
+      - directory: ${project.projectDir}
+    python:
+      files:
+      - directory: ${project.projectDir}
+    ruby:
+      files:
+      - directory: ${project.projectDir}
+    typescript:
+      files:
+      - directory: ${project.projectDir}
+    wars:
+      extensions: [war]
+      files:
+      - directory: ${project.projectDir}
+analyze:
+  mode: central
+install:
+  coverity:
+    version: default
+serverUrl: https://sipse.polaris.synopsys.com

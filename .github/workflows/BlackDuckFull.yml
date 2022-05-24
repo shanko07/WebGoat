@@ -35,7 +35,7 @@ jobs:
         uses: synopsys-sig/detect-action@v0.3.0
         env:
           DETECT_PROJECT_NAME: ShankoWebGoat
-          DETECT_PROJECT_VERSION_NAME: ${{ github.ref##*/ }}
+          DETECT_PROJECT_VERSION_NAME: ${{ github.ref }}
         with:
             scan-mode: INTELLIGENT
             github-token: ${{ secrets.GITHUB_TOKEN }}

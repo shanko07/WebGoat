@@ -4,8 +4,11 @@ name: Black Duck
 
 # Controls when the workflow will run
 on:
-  release:
-    types: [published]
+  # Triggers the workflow on push or pull request events but only for the shanko_develop branch
+  push:
+    branches: [ shanko_develop ]
+  pull_request:
+    branches: [ shanko_develop ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -34,7 +37,7 @@ jobs:
       - name: Run Synopsys Detect
         uses: synopsys-sig/detect-action@v0.3.0
         with:
-            scan-mode: INTELLIGENT
+            scan-mode: RAPID # Can be omitted, since this is the default value
             github-token: ${{ secrets.GITHUB_TOKEN }}
             detect-version: 7.9.0
             blackduck-url: ${{ secrets.BLACKDUCK_URL }}

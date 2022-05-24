@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Black Duck
+name: Black Duck Full
 
 # Controls when the workflow will run
 on:
@@ -35,7 +35,7 @@ jobs:
         uses: synopsys-sig/detect-action@v0.3.0
         env:
           DETECT_PROJECT_NAME: ShankoWebGoat
-          DETECT_PROJECT_VERSION_NAME: ${GITHUB_REF##*/}
+          DETECT_PROJECT_VERSION_NAME: ${{ GITHUB_REF##*/ }}
         with:
             scan-mode: INTELLIGENT
             github-token: ${{ secrets.GITHUB_TOKEN }}

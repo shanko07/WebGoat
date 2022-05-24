@@ -36,6 +36,9 @@ jobs:
      
       - name: Run Synopsys Detect
         uses: synopsys-sig/detect-action@v0.3.0
+        env:
+          DETECT_PROJECT_NAME: ShankoWebGoat
+          DETECT_PROJECT_VERSION_NAME: ${GITHUB_REF#refs/heads/}
         with:
             scan-mode: RAPID # Can be omitted, since this is the default value
             github-token: ${{ secrets.GITHUB_TOKEN }}

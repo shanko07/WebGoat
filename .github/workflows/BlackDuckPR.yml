@@ -40,7 +40,7 @@ jobs:
           DETECT_PROJECT_NAME: ShankoWebGoat
           DETECT_PROJECT_VERSION_NAME: ${{ github.ref }}
           DETECT_PROJECT_VERSION_PHASE: DEVELOPMENT
-          DETECT_POLICY_CHECK_FAIL_ON_NAMES: \"No Critical/High\"
+          #DETECT_POLICY_CHECK_FAIL_ON_NAMES: \"No Critical/High\"
         with:
             scan-mode: RAPID # Can be omitted, since this is the default value
             github-token: ${{ secrets.GITHUB_TOKEN }}

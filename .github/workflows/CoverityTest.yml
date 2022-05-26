@@ -12,6 +12,9 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
+    env:
+      PATH
+    
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -39,7 +42,7 @@ jobs:
           export PATH=./cov-analysis-linux64/bin:$PATH
           echo $PATH
           cov-analyze --version
-          echo "${pwd}/cov-analysis-linux64/bin" >> $GITHUB_PATH
+          echo "./cov-analysis-linux64/bin:${PATH}" >> $PATH
         
       
       - name: Test Cov Install

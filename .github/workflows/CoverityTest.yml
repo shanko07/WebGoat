@@ -39,6 +39,7 @@ jobs:
           tar xzf cov-analysis.tar.gz
           mv cov-analysis-linux64-2022.3.0 cov-analysis-linux64
           rm -rf cov-analysis.tar.gz
+          cp license.dat ./cov-analysis-linux64/bin
           echo $PATH
           export PATH=./cov-analysis-linux64/bin:$PATH
           echo $PATH

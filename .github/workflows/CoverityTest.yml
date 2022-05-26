@@ -43,7 +43,9 @@ jobs:
       
       - name: Test Cov Install
         run: |
+          echo $PATH
           ls -lahrt
+          pwd
           cov-analyze --version
 
      

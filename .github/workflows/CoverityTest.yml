@@ -30,15 +30,15 @@ jobs:
         
       - name: Install Coverity
         run: |
-        curl -k -s -L --user ${{ secrets.COVERITY_USER }}:${{ secrets.COVERITY_AUTHKEY }} -o cov-analysis.tar.gz ${{ secrets.COVERITY_URL }}/downloadFile.htm?fn=cov-analysis-linux64-2022.3.0.tar.gz
-        curl -k -s -L --user ${{ secrets.COVERITY_USER }}:${{ secrets.COVERITY_AUTHKEY }} -o license.dat ${{ secrets.COVERITY_URL }}/downloadFile.htm?fn=license.dat
-        tar xzvf cov-analysis.tar.gz
+          curl -k -s -L --user ${{ secrets.COVERITY_USER }}:${{ secrets.COVERITY_AUTHKEY }} -o cov-analysis.tar.gz ${{ secrets.COVERITY_URL }}/downloadFile.htm?fn=cov-analysis-linux64-2022.3.0.tar.gz
+          curl -k -s -L --user ${{ secrets.COVERITY_USER }}:${{ secrets.COVERITY_AUTHKEY }} -o license.dat ${{ secrets.COVERITY_URL }}/downloadFile.htm?fn=license.dat
+          tar xzvf cov-analysis.tar.gz
         
       
       - name: Test Cov Install
         run: |
-        ls -lahrt
-        cov-analysis --version
+          ls -lahrt
+          cov-analysis --version
 
      
 #      - name: Run Coverity

@@ -5,6 +5,10 @@ name: Coverity
 # Controls when the workflow will run
 on:
 
+  # Triggers the workflow on push events but only for the shanko_develop branch
+  push:
+    branches: [ shanko_develop ]
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 

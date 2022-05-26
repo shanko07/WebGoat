@@ -39,6 +39,7 @@ jobs:
           export PATH=./cov-analysis-linux64/bin:$PATH
           echo $PATH
           cov-analyze --version
+          echo "${pwd}/cov-analysis-linux64/bin" >> $GITHUB_PATH
         
       
       - name: Test Cov Install

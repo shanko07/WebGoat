@@ -38,13 +38,13 @@ jobs:
           echo $PATH
           export PATH=./cov-analysis-linux64/bin:$PATH
           echo $PATH
-          cov-analysis --version
+          cov-analyze --version
         
       
       - name: Test Cov Install
         run: |
           ls -lahrt
-          cov-analysis --version
+          cov-analyze --version
 
      
 #      - name: Run Coverity

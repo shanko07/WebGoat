@@ -55,7 +55,7 @@ jobs:
           cov-analyze --version
 
       - name: Run Coverity
-        uses: synopsys-sig-community/synopsys-github-templates/coverity@v0.0.1-shanko1
+        uses: synopsys-sig-community/synopsys-github-templates/coverity@v0.0.2
         with:
           coverity-url: ${{ secrets.COVERITY_URL }}
           coverity-user: ${{ secrets.COVERITY_USER }}

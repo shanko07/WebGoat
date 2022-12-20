@@ -32,7 +32,7 @@ jobs:
 
      
       - name: Run Synopsys Detect
-        uses: synopsys-sig/detect-action@v0.3.0
+        uses: synopsys-sig/detect-action@v0.3.4
         env:
           DETECT_PROJECT_NAME: ShankoWebGoat
           DETECT_PROJECT_VERSION_NAME: ${{ github.ref }}
